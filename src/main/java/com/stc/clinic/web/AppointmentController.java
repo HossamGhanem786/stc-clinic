@@ -37,7 +37,7 @@ public class AppointmentController {
         return new ResponseEntity<>( appointmentService.addAppointment(appointment), HttpStatus.OK);
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping ("/{id}")
     public ResponseEntity<?> updateAppointment(
             @PathVariable("id")Long id,@RequestBody String reason){
         return new ResponseEntity<>( appointmentService.cancelAppointment(id,reason), HttpStatus.OK);
